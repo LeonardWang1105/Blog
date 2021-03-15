@@ -78,6 +78,7 @@
     Etymology
   </label>
             <button id="btnQuery" type="button" class="btn btn-primary">Query</button>
+            <button id="btnPaste" type="button" class="btn btn-primary">Clear</button>
 </div>
             <label for="exampleFormControlTextarea1" class="form-label">Type/paste in the textarea</label>
             
@@ -107,6 +108,12 @@
               }
               //window.open("/tools/Dictionaries.aspx?word=" + encodeURIComponent(word) + "?dictionaries=", "_blank");
           });
+
+          $("#btnPaste").click( function(e) {
+              var word = $("#txtMain");
+              word.val("");
+              word.select();
+            });
 
           function getSelectedText(idoftextarea) {
               var textArea = document.getElementById(idoftextarea);
