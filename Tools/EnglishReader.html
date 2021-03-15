@@ -1,0 +1,123 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and
+      Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.80.0">
+    <title>Welcome</title>
+    <link rel="canonical"
+      href="https://getbootstrap.com/docs/5.0/examples/blog/">
+
+          <link rel="stylesheet" href="/Resources/Tippy6/scale.css">
+    <script src="/Resources/Tippy6/popper.min.js"></script>
+    <script src="/Resources/Tippy6/tippy-bundle.umd.min.js"></script>
+
+      <script src="/Resources/jquery-3.6.0.min.js"></script>
+
+    <!-- Development version -->
+    <%--<script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.js"></script>--%>
+    <!-- Production version -->
+    <!--<script src="https://unpkg.com/@popperjs/core@2"></script>-->
+    <!-- Bootstrap core CSS -->
+    <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        html,body
+        {
+            height:100%;
+        }
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+        </style>
+    <!-- Custom styles for this template -->
+    <!-- <link href="https://fonts.googleapis.com/css?family=Playfair&#43;Display:700,900&amp;display=swap" rel="stylesheet"> -->
+    <link href="../assets/font.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="../assets/blog.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container">
+      <header class="blog-header py-3">
+        <div class="row flex-nowrap justify-content-between
+          align-items-center">
+          <div class="text-center"> <a href="/" style="text-decoration:
+              none;">Learning English Easily And Happily</a> </div>
+        </div>
+      </header>
+    </div>
+    <main class="container h-75">
+<%--      <div class="row">--%>
+        <div class="col-md-12 h-100">
+
+            <div  >
+                  <input class="form-check-input" type="checkbox" checked id="chkWebster">
+  <label class="form-check-label" for="chkWebster">
+    Webster
+  </label>
+                          <input class="form-check-input" type="checkbox" value="" id="chkCambridge">
+  <label class="form-check-label" for="chkCambridge">
+    Cambridge
+  </label>
+                          <input class="form-check-input" type="checkbox" checked id="chkEtymology">
+  <label class="form-check-label" for="chkEtymology">
+    Etymology
+  </label>
+            <button id="btnQuery" type="button" class="btn btn-primary">Query</button>
+</div>
+            <label for="exampleFormControlTextarea1" class="form-label">Type/paste in the textarea</label>
+            
+  <textarea id="txtMain" class="form-control h-100" rows="3"></textarea>
+
+        </div>
+         <%--</div>--%>
+
+      <!-- /.row -->
+    </main>
+    <!-- /.container -->
+    <footer class="blog-footer">
+      
+    </footer>
+      <script>
+          $("#btnQuery").click( function() {
+              var word = getSelectedText("txtMain");
+              //var dictionaries = null;
+              if ($("#chkWebster")[0].checked) {
+                  window.open("https://www.learnersdictionary.com/definition/" + encodeURIComponent(word), "_blank");
+              }
+              if ($("#chkCambridge")[0].checked) {
+                  window.open("https://dictionary.cambridge.org/search/direct/?datasetsearch=english&q=" + encodeURIComponent(word), "_blank");
+              }
+              if ($("#chkEtymology")[0].checked) {
+                  window.open("https://www.etymonline.com/search?q=" + encodeURIComponent(word), "_blank");
+              }
+              //window.open("/tools/Dictionaries.aspx?word=" + encodeURIComponent(word) + "?dictionaries=", "_blank");
+          });
+
+          function getSelectedText(idoftextarea) {
+              var textArea = document.getElementById(idoftextarea);
+              var text = textArea.value;
+              var indexStart = textArea.selectionStart;
+              var indexEnd = textArea.selectionEnd;
+              //alert(text.substring(indexStart, indexEnd));
+              return text.substring(indexStart, indexEnd);
+          }
+      </script>
+
+
+  </body>
+</html>
