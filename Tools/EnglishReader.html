@@ -52,32 +52,21 @@
   </head>
   <body>
     <div class="container">
-      <header class="blog-header py-3">
-        <div class="row flex-nowrap justify-content-between
-          align-items-center">
-          <div class="text-center"> <a href="/" style="text-decoration:
-              none;">Learning English Easily And Happily</a> </div>
-        </div>
-      </header>
+
     </div>
     <main class="container h-75">
 
         <div class="col-md-12 h-100">
 
-            <div  >
-                  <input class="form-check-input" type="checkbox" checked id="chkWebster">
-  <label class="form-check-label" for="chkWebster">
-    Webster
-  </label>
-                          <input class="form-check-input" type="checkbox" value="" id="chkCambridge">
-  <label class="form-check-label" for="chkCambridge">
-    Cambridge
-  </label>
-                          <input class="form-check-input" type="checkbox" checked id="chkEtymology">
-  <label class="form-check-label" for="chkEtymology">
-    Etymology
-  </label>
-            <button id="btnQuery" type="button" class="btn btn-primary">Query</button>
+            <div id="topBar" >
+              <button  type="button" class="btn btn-primary">Webster</button>
+              <button  type="button" class="btn btn-primary">Cambridge</button>
+              <button  type="button" class="btn btn-primary">Etymology</button>
+               <input class="form-check-input" type="checkbox" value="" id="chkReadOnly">
+              <label class="form-check-label" for="chkReadOnly">
+                Read Only
+              </label>
+
             <button id="btnPaste" type="button" class="btn btn-primary">Clear</button>
 </div>
             <label for="exampleFormControlTextarea1" class="form-label">Type/paste in the textarea</label>
@@ -91,29 +80,41 @@
     </main>
     <!-- /.container -->
     <footer class="blog-footer">
-      
+      <div class="text-center"> <a href="/" style="text-decoration:
+        none;">Learning English Easily And Happily</a> </div>
     </footer>
       <script>
-          $("#btnQuery").click( function() {
-              var word = getSelectedText("txtMain");
-              //var dictionaries = null;
-              if ($("#chkWebster")[0].checked) {
-                  window.open("https://www.learnersdictionary.com/definition/" + encodeURIComponent(word), "_blank");
-              }
-              if ($("#chkCambridge")[0].checked) {
-                  window.open("https://dictionary.cambridge.org/search/direct/?datasetsearch=english&q=" + encodeURIComponent(word), "_blank");
-              }
-              if ($("#chkEtymology")[0].checked) {
-                  window.open("https://www.etymonline.com/search?q=" + encodeURIComponent(word), "_blank");
-              }
-              //window.open("/tools/Dictionaries.aspx?word=" + encodeURIComponent(word) + "?dictionaries=", "_blank");
-          });
-
-          $("#btnPaste").click( function(e) {
+          $("#topBar button").click( function() {
+            var key=$(this).text();
+            //alert(key);
+            var word = getSelectedText("txtMain");
+            if(key=="Webster")
+            {
+              window.open("https://www.learnersdictionary.com/definition/" + encodeURIComponent(word), "_blank");
+            }
+            else if (key=="Cambridge")
+            {
+              window.open("https://dictionary.cambridge.org/search/direct/?datasetsearch=english&q=" + encodeURIComponent(word), "_blank");
+            }
+            else if (key=="Etymology")
+            {
+              window.open("https://www.etymonline.com/search?q=" + encodeURIComponent(word), "_blank");
+            }
+            else if (key=="Clear")
+            {
               var word = $("#txtMain");
               word.val("");
               word.select();
-            });
+            }
+
+              //var dictionaries = null;
+              //window.open("/tools/Dictionaries.aspx?word=" + encodeURIComponent(word) + "?dictionaries=", "_blank");
+          });
+
+          $("#chkReadOnly").click(function(){
+            $("#txtMain").prop("readonly", $("#chkReadOnly")[0].checked);
+
+          });
 
           function getSelectedText(idoftextarea) {
               var textArea = document.getElementById(idoftextarea);
