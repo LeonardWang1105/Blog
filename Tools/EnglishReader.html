@@ -105,7 +105,9 @@
             {
               var word = $("#txtMain");
               word.val("");
-              word.select();
+              $("#chkReadOnly").prop("checked", "unchecked");
+              $("#chkReadOnly").click();
+              word.focus();
             }
 
               //var dictionaries = null;
