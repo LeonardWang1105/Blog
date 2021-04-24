@@ -1,0 +1,185 @@
+ecology   #n
+multiply   #v2
+shelter_2   #v1
+predator   #n1
+fox   #n1
+burrow   #v1
+bury   #v3
+underneath   #pp1
+hollow out   #pv1
+within_2   #av1
+digest   #v3
+heading   #n1
+hit_2   #n2
+explode   #v6
+rocket_2   #v1
+level off   #pv2
+take a dive   #pv
+nosedive   #n1
+plunge   #v2
+plummet   #v
+thrive   #v
+slump   #v1
+climb   #v4
+whopping   #aj
+plateau_2   #v1
+unchanged   #aj
+surge_2   #v1
+crash_2   #v4
+investor   #n
+hike_2   #v1
+agriculture   #n
+run-off   #n
+greenhouse   #n
+greenhouse gas   #n
+logging   #n
+deforestation   #n
+log_3   #v3
+immediate   #aj4
+mend   #v2w
+embezzle   #vo
+collar   #n1
+slave   #n2
+house   #n5
+timeless   #aj1
+opposed   #aj1
+catwalk   #n1
+accessible   #aj1
+cardigan   #n
+height   #n7
+presentation   #n6
+substance   #n4
+visually   #av
+presume   #v1
+presumably   #av
+get   #v15
+drop   #v8o
+donate   #v1
+donation   #n1
+truly   #av2
+emperor   #n
+lively   #aj2
+fly   #v9
+forgettable   #aj
+unforgettable   #aj
+bustle   #v1
+bustling   #aj
+thriving   #aj
+cosmopolitan   #aj1
+multicultural   #aj
+atmosphere   #n3w
+endless   #aj1
+monument   #n1
+landmark   #n1
+reminder   #n1
+history   #n1
+excavate   #v2
+depth   #n1
+centimetre   #n
+brood_2   #n1
+chamber   #n5
+shallow   #aj1
+hang   #v1
+pear   #n
+surface   #n1
+perfectly   #av2
+roll   #v1
+burial   #n2
+overlap   #v1
+lap_2   #v1
+temperate   #aj1
+cold_2   #n2
+generation   #n1
+offspring   #n2
+coastal   #aj
+ice cap   #n
+pole   #n2
+polar   #aj
+extinct   #aj1
+penguin   #n
+habitat   #n
+ancestor   #n1
+the black death   #n
+bubonic plague   #n
+plague   #n1
+bush   #n1
+beat around the bush   #pv
+regret   #v1
+crumble   #v1
+cry over spilled milk   #pv
+suspect   #v1
+look on the bright side   #pv
+blessing   #n3
+disguise_2   #n3
+cloth   #n1
+methane   #no
+smallpox   #n
+pox   #n2
+scheme   #n2
+mutual   #aj2
+regulate   #v1
+federal   #aj2
+communally   #av
+shareholder   #n
+fixed   #aj1
+trade_2   #v1
+sea   #n2
+Thames   #pn
+flow_2   #v1
+winding   #aj
+wind2_2   #v1
+iconic   #aj
+attraction   #n1
+the London Eye   #pn
+house   #n7
+Big Ben   #pn
+Tower Bridge   #pn
+land   #n2
+heart   #n7
+tourism   #n
+all around   #av1
+base_2   #v
+proximity   #n
+backdrop   #n1
+site   #n3
+firework   #n1
+light up   #pv1
+put on   #pv28
+central   #aj3
+pipeline   #n1
+floor   #n4
+deep-sea   #aj
+vast   #aj
+costly   #aj1
+infrastructure   #n
+maintain   #v2
+well_4   #n1
+install   #v1
+inspect   #v1
+cutting-edge   #aj
+underwater_2   #aj
+drone   #n3
+welcoming   #aj2
+inviting   #aj1
+approachable   #aj1
+thoughtful   #aj2
+attentive   #aj2
+too much   #aj
+demonstrate   #v1
+lose track   #pv
+recording   #n1
+management   #n3
+module   #n1
+in one go   #pp
+summer school   #n
+fit   #v7
+combination   #n1
+visual   #aj
+visualize   #v1
+picture_2   #v1
+solitary   #aj1
+self-study   #n
+scrutinize   #v
+shortcoming   #n
+dual   #aj
+citizenship   #n1
