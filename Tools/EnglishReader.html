@@ -88,6 +88,8 @@
         none;">1</a>
             <a href="2.html" style="text-decoration:
         none;">2</a>
+            <a href="Third.html" style="text-decoration:
+        none;">Third</a>
             <a href="QingmingFestival.html" style="text-decoration:
         none;">Qingming Festival</a>
         </div>
@@ -135,6 +137,10 @@
               //alert(text.substring(indexStart, indexEnd));
               return text.substring(indexStart, indexEnd);
           }
+
+          $(function () {
+              $("#txtMain").prop("readonly", $("#chkReadOnly")[0].checked);
+          });
       </script>
 
 
