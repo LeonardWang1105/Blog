@@ -1,0 +1,158 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and
+      Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.80.0">
+    <title>Welcome</title>
+    <link rel="canonical"
+      href="https://getbootstrap.com/docs/5.0/examples/blog/">
+
+          <link rel="stylesheet" href="../Resources/Tippy6/scale.css">
+    <script src="../Resources/Tippy6/popper.min.js"></script>
+    <script src="../Resources/Tippy6/tippy-bundle.umd.min.js"></script>
+
+      <script src="../Resources/jquery-3.6.0.min.js"></script>
+
+    <!-- Development version -->
+    <!--<script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.js"></script>--!>
+    <!-- Production version -->
+    <!--<script src="https://unpkg.com/@popperjs/core@2"></script>-->
+    <!-- Bootstrap core CSS -->
+    <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        html,body
+        {
+            height:100%;
+        }
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+        </style>
+    <!-- Custom styles for this template -->
+    <!-- <link href="https://fonts.googleapis.com/css?family=Playfair&#43;Display:700,900&amp;display=swap" rel="stylesheet"> -->
+    <link href="../assets/font.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="../assets/blog.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container">
+
+    </div>
+    <main class="container h-75">
+
+        <div class="col-md-12 h-100">
+
+            <div id="topBar" class="sticky-top" >
+              <button  type="button" class="btn btn-primary">Webster LearnersDictionary</button>
+              <button  type="button" class="btn btn-primary">Cambridge</button>
+              <button  type="button" class="btn btn-primary">Etymology</button>
+			  <button  type="button" class="btn btn-primary">Oxford</button>
+			  <button  type="button" class="btn btn-primary">Webster</button>
+              <button id="btnPaste" type="button" class="btn btn-primary">Clear</button>
+               <input class="form-check-input" type="checkbox" value="" id="chkReadOnly">
+              <label class="form-check-label" for="chkReadOnly">
+                Read Only
+              </label>
+
+
+</div>
+            <label for="exampleFormControlTextarea1" class="form-label">Type/paste in the textarea</label>
+            
+  <textarea id="txtMain" class="form-control h-75" rows="3"></textarea>
+
+        </div>
+
+
+      <!-- /.row -->
+    </main>
+    <!-- /.container -->
+    <footer class="blog-footer">
+        <div class="text-center">
+            <a href="/" style="text-decoration:
+        none;">Learning English Easily And Happily</a>
+            <a href="1.html" style="text-decoration:
+        none;">1</a>
+            <a href="2.html" style="text-decoration:
+        none;">2</a>
+            <a href="Third.html" style="text-decoration:
+        none;" target="_blank">Third</a>
+            <a href="QingmingFestival.html" style="text-decoration:
+        none;">Qingming Festival</a>
+        </div>
+    </footer>
+      <script>
+          $("#topBar button").click( function() {
+            var key=$(this).text();
+            //alert(key);
+            var word = getSelectedText("txtMain");
+            if(key=="Webster LearnersDictionary")
+            {
+              window.open("https://www.learnersdictionary.com/definition/" + encodeURIComponent(word), "_blank");
+            }
+            else if (key=="Cambridge")
+            {
+              window.open("https://dictionary.cambridge.org/search/direct/?datasetsearch=english&q=" + encodeURIComponent(word), "_blank");
+            }
+            else if (key=="Etymology")
+            {
+              window.open("https://www.etymonline.com/search?q=" + encodeURIComponent(word), "_blank");
+            }
+			else if (key=="Oxford")
+            {
+              window.open("https://www.lexico.com/search?utf8=%E2%9C%93&amp;filter=en_dictionary&amp;dictionary=en&amp;s=t&amp;query=" + encodeURIComponent(word), "_blank");
+            }
+			else if (key=="Webster")
+            {
+              window.open("https://www.merriam-webster.com/dictionary/" + encodeURIComponent(word), "_blank");
+            }
+            else if (key=="Clear")
+            {
+              var word = $("#txtMain");
+              word.val("");
+              $("#chkReadOnly").prop("checked", "unchecked");
+              $("#chkReadOnly").click();
+              word.focus();
+            }
+
+              //var dictionaries = null;
+              //window.open("/tools/Dictionaries.aspx?word=" + encodeURIComponent(word) + "?dictionaries=", "_blank");
+          });
+
+          $("#chkReadOnly").click(function(){
+            $("#txtMain").prop("readonly", $("#chkReadOnly")[0].checked);
+
+          });
+
+          function getSelectedText(idoftextarea) {
+              var textArea = document.getElementById(idoftextarea);
+              var text = textArea.value;
+              var indexStart = textArea.selectionStart;
+              var indexEnd = textArea.selectionEnd;
+              //alert(text.substring(indexStart, indexEnd));
+              return text.substring(indexStart, indexEnd);
+          }
+
+          $(function () {
+              $("#txtMain").prop("readonly", $("#chkReadOnly")[0].checked);
+          });
+      </script>
+
+
+  </body>
+</html>
